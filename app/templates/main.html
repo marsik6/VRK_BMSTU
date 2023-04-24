@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет прочности при растяжении</title>
+</head>
+<body>
+    <h1 style="color:#5fcc44; font-family:areal;">Расчет прочности при растяжении</h1>
+    <form action="" method="post">
+    <fieldset>
+        <legend>Введите параметры</legend>
+    <p>
+        <label for="mn">Соотношение матрица-наполнитель,................[0 - 6] </label>
+	    <input type="text" name="mn" required>
+    </p><p>
+	    <label for="x2">Плотность, кг/м3.....................................[1500 - 2500] </label>
+	    <input type="text" name="x2" required>
+    </p><p>
+	    <label for="x3">Модуль упругости, ГПа................................[2 - 2000] </label>
+	    <input type="text" name="x3" required>
+    </p><p>
+	    <label for="x4">Количество отвердителя, м.%..................... [20 - 200]</label>
+	    <input type="text" name="x4" required>
+    </p><p>
+        <label for="x5">Содержание эпоксидных групп,%_2.............[15 - 30] </label>
+	    <input type="text" name="x5" required>
+    </p><p>
+        <label for="x6">Температура вспышки, С_2.......................[100 - 500]</label>
+	    <input type="text" name="x6" required>
+    </p><p>
+        <label for="x7">Поверхностная плотность, г/м2...............[0,5 - 1300]</label>
+	    <input type="text" name="x7" required>
+    </p><p>
+        <label for="y_my">Модуль упругости при растяжении, ГПа...[50 - 100]</label>
+	    <input type="text" name="y_my" required>
+    </p><p>
+        <label for="x8">Потребление смолы, г/м2............................[50 - 400] </label>
+	    <input type="text" name="x8" required>
+    </p><p>
+        <label for="x9">Угол нашивки, градусов.............................[0 или 90] </label>
+	    <input type="number" name="x9" min='0' max='90' step='1' required>
+    </p><p>
+        <label for="x10">Шаг нашивки....................................................[0 - 15]</label>
+	    <input type="text" name="x10" required>
+    </p><p>
+        <label for="x11">Плотность нашивки.....................................[20 - 100]</label>
+	    <input type="text" name="x11" required>
+	</p>
+    </fieldset>
+	<p>
+	    <input type="submit" value="Предсказать">
+        <input type="reset">
+	</p>
+    </form>
+    <p>
+    {% if message %}
+        <p><b>{{message}}</b></p>
+    {% endif %}
+    </p>
+</body>
+
+</html>
